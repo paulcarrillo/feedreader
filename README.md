@@ -2,7 +2,7 @@
 
 ## Installation
 
-How to successfully run the application.
+**How to successfully run the application.**
 
 1. Fork the feedreader repo [GitHub Pages](https://help.github.com/articles/fork-a-repo/).
 2. `cd` into desired folder where you would like the file to live.
@@ -12,7 +12,9 @@ How to successfully run the application.
 
 ## Why this Project?
 
-Testing is an important part of the development process many organizations practice a standard of development known as "test-driven development". This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass.
+>Testing is an important part of the development process many organizations practice a standard of development known as "test-driven development". This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass.
+
+- Udacity
 
 Tests are used to make sure future feature development doesn't break existing features!
 
