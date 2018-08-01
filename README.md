@@ -2,9 +2,9 @@
 
 ## Installation
 
-How to successfully run the application
+How to successfully run the application.
 
-1. Fork the  repo [GitHub Pages](https://help.github.com/articles/fork-a-repo/).
+1. Fork the feedreader repo [GitHub Pages](https://help.github.com/articles/fork-a-repo/).
 2. `cd` into desired folder where you would like the file to live.
 3. Using `git clone` copy the file on to your machine.
 4. Once file is installed testing can be viewed by simply opening the html to a browser.
