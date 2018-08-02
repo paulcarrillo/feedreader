@@ -74,7 +74,7 @@ $(function() {
 
          it('feeds loaded', function() {
            const feed = document.querySelector('.feed');
-           expect(feed.children.length > 0).toBe(true);
+           expect(feed.children.length).not.toBe(0);
          });
     });
 
@@ -83,23 +83,34 @@ $(function() {
 
         const container = document.querySelector('.feed');
         const firstFeed = [];
+        const secondFeed = [];
 
          /* Test loads muiltiple feeds and compares content when a new
           * feed is loaded by the loadFeed functionand checks that the
           * content actually changes.
           */
 
-        beforeEach(function(done) {
-            loadFeed(0);
-            Array.from(container.children).forEach(content => {
-                firstFeed.push(content.innerText);
+       beforeEach(function(done) {
+            loadFeed(0, loadFeed(1, done()));
+
+            Array.from(container.children).forEach( function(entry) {
+              firstFeed.push(entry.innerText);
+          //    alert('first');
+          //    console.log(firstFeed);
             });
-            loadFeed(1, done);
+
+          //loadFeed(1, done);
+
+            Array.from(container.children).forEach( function(entry) {
+              secondFeed.push(entry.innerText);
+            //    alert('second');
+            //    console.log(secondFeed);
+            });
         });
+
         it('content changes', function() {
-            Array.from(container.children).forEach( (content, index) => {
-                expect(content.innerText !== firstFeed[index]).toBe(true);
-            });
+          expect(firstFeed).toEqual(secondFeed);
         });
     });
+
 }());
